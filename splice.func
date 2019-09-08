@@ -1,0 +1,33 @@
+#This function was written by Douglas Tuers
+#8/28/2019
+#added second argument and error handling on 9/6/2019
+#This function takes as an argument a string 
+#it then splits the string up into a vector consisting 
+#of each character in the string
+#the first argument in the string we are splicing
+#the second argument indexes a character in the string
+#
+#
+#
+#
+#
+#things to do: can we pass a file to the function? can we
+#have the user enter a string if none is given
+#can we also make so that we index words seperated by white
+#space tab comma etc an then pick out a letter in that word. 
+#say the third letter in the 43 word
+#
+#########################################################
+#########################################################
+
+splice <- function(g, f){
+ 
+  k <- c()
+  z <- nchar(g)
+  d <- 1:z
+  if(f>z){print("The index you entered is larger than
+                the number of characters in the string");
+    stop()}
+  for (i in d){k <- append(k, substr(g,i,i))}
+  return(k[f])
+}
