@@ -7,10 +7,6 @@
 #the first argument in the string we are splicing
 #the second argument indexes a character in the string
 #
-#this is a new line
-#this is a newer line
-#this is an even newer line
-#this is even newer than the
 #
 #things to do: can we pass a file to the function? can we
 #have the user enter a string if none is given
@@ -21,14 +17,18 @@
 #########################################################
 #########################################################
 
-splice <- function(g, f){
- 
-  k <- c()
-  z <- nchar(g)
+splice <- function(text, indexWanted, input?){
+	
+  if(input=True){
+  readline(prompt:"Enter Text:")
+  } else {
+  
+	z <- nchar(g)
   d <- 1:z
   if(f>z){print("The index you entered is larger than
                 the number of characters in the string");
     stop()}
   for (i in d){k <- append(k, substr(g,i,i))}
+   }
   return(k[f])
 }
