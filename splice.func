@@ -12,19 +12,19 @@
 #########################################################
 
 splice <- function(text, indexWanted, input, file, sep){
-	
-  if(input=TRUE){
-  text <- readline(prompt:"Enter Text:")
-  } elseif(file=TRUE) {
-  text <- read.table(file,sep=sep)
-  } else {
-  
+
+#  if(input=TRUE){
+#  text <- readline(prompt:"Enter Text:")
+#  } elseif(file=TRUE) {
+#  text <- read.table(file,sep=sep)
+#  } else {
+   k = c()
 	z <- nchar(text)
   d <- 1:z
   if(indexWanted>z){print("The index you entered is larger than
                 the number of characters in the string");
     stop()}
   for (i in d){k <- append(k, substr(text,i,i))}
-   }
+# }
   return(k[indexWanted])
-}
+  }
