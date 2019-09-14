@@ -8,27 +8,23 @@
 #the second argument indexes a character in the string
 #
 #
-#things to do: can we pass a file to the function? can we
-#have the user enter a string if none is given
-#can we also make so that we index words seperated by white
-#space tab comma etc an then pick out a letter in that word. 
-#say the third letter in the 43 word
-#
 #########################################################
 #########################################################
 
-splice <- function(text, indexWanted, input?){
+splice <- function(text, indexWanted, input, file, sep){
 	
-  if(input=True){
-  readline(prompt:"Enter Text:")
+  if(input=TRUE){
+  text <- readline(prompt:"Enter Text:")
+  } elseif(file=TRUE) {
+  text <- read.table(file,sep=sep)
   } else {
   
-	z <- nchar(g)
+	z <- nchar(text)
   d <- 1:z
-  if(f>z){print("The index you entered is larger than
+  if(indexWanted>z){print("The index you entered is larger than
                 the number of characters in the string");
     stop()}
-  for (i in d){k <- append(k, substr(g,i,i))}
+  for (i in d){k <- append(k, substr(text,i,i))}
    }
-  return(k[f])
+  return(k[indexWanted])
 }
